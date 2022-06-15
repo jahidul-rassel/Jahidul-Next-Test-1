@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function TheUserList({ UserList }) {
-  console.log(UserList);
+export default function UserListComponent({ UserList }) {
+  //console.log(UserList);
 
   return (
     <div>
-        <h5>From Passed Props [TheUserList]</h5>
+        <h5>From Passed Props [ UserList Component ]</h5>
 
         <ul>
         {

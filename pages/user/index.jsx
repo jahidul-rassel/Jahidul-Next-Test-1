@@ -2,7 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head';
 
-import TheUserList from './TheUserList'
+import User from '../../components/User';
+import UserListComponent from '../../components/UserListComponent';
+
+
+import StaticPage from './StaticPage';
+import UserListPage from './UserListPage';
 
 
 export default function index( {data: arrData} ) {
@@ -31,10 +36,13 @@ export default function index( {data: arrData} ) {
             }
             </ul>
         </div>
-
         
+        <User UserList={ arrData.data }></User>
+        <UserListComponent UserList={arrData.data} ></UserListComponent>
 
-        <TheUserList UserList={arrData.data} ></TheUserList>
+
+        <StaticPage></StaticPage>    
+        <UserListPage UserList={ arrData.data }></UserListPage>
         
     </div>
   )
